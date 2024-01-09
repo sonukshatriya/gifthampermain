@@ -17,7 +17,7 @@ class usertable(models.Model):
     u_phone=models.BigIntegerField()
     u_status=models.IntegerField()
 class userdeatiltable(models.Model):
-    u_id=
+    u_id=models.ForiegnkeyField(usertable,on_delete=models.CASCADE)
     dob=models.DateField()
     u_address=models.CharField(max_length=100)
     u_image=models.ImageField(upload_to='photos')
